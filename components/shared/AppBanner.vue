@@ -41,8 +41,13 @@ defineProps<{
     gap: 16px;
     justify-content: center;
   }
-  // & :deep(.btn):not(:first-of-type) {
-  //     margin-left: 20px;
-  // }
+}
+@media screen and (min-width: 1200px) {
+  .banner {
+    &__title {
+      font-size: 40px;
+      margin-bottom: 32px;
+    }
+  }
 }
 </style>
