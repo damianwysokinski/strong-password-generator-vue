@@ -11,24 +11,7 @@
             height="111"
           />
         </NuxtLink>
-        <ul
-          v-for="({ title, items }, index) in footerListData"
-          :key="index"
-          class="footer__list"
-        >
-          <li class="footer__item">
-            {{ title }}
-          </li>
-          <li
-            v-for="({ name, link }, itemIndex) in items"
-            :key="itemIndex"
-            class="footer__item"
-          >
-            <NuxtLink :to="link" class="footer__link">
-              {{ name }}
-            </NuxtLink>
-          </li>
-        </ul>
+        <FooterList v-for="(list, index) in footerListData" :key="index" :list="list" />
       </div>
       <p class="footer__copyright">
         Copyright © {{ currentYear }} password-generator. All rights reserved
@@ -139,20 +122,6 @@ const footerListData = [
   }
   &__logo {
     max-width: 220px;
-  }
-  &__list {
-    list-style: none;
-  }
-  &__item {
-    color: #ffffff;
-    margin-bottom: 10px;
-
-    &:first-child {
-      color: var(--brand-pink-color);
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
   }
   &__copyright {
     padding: 40px 0;
