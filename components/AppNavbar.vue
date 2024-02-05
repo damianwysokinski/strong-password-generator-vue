@@ -21,7 +21,16 @@ import AppButton from "~/components/shared/AppButton.vue";
 
 <style scoped lang="scss">
 .navbar {
+  position: absolute;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  background: #ffffff;
   padding: 16px 0;
+  border-radius: 24px;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
 
   &__wrapper {
     display: flex;
