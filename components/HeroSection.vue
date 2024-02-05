@@ -38,7 +38,8 @@ import AppTitle from "~/components/shared/AppTitle.vue";
 <style scoped lang="scss">
 .hero {
   background: var(--base-bg-color);
-  padding: 60px 0;
+  padding-top: 180px;
+  padding-bottom: 60px;
 
   &__subtitle {
     color: var(--brand-pink-color);
@@ -64,7 +65,7 @@ import AppTitle from "~/components/shared/AppTitle.vue";
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    padding-top: 140px;
+    padding-top: 280px;
 
     &__wrapper {
       display: grid;
