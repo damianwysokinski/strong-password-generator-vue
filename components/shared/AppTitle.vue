@@ -1,23 +1,19 @@
 <template>
-  <component :is="tag" :class="[getTagClass(), { centered: centered }]">
+  <component :is="tag" :class="[titleStyle, { centered: centered }]">
     <slot></slot>
   </component>
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
+const { tag, centered } = defineProps<{
   tag: string;
   centered?: boolean;
 }>();
 
-const getTagClass = () => {
-  const tagClassMap = {
-    h1: "title",
-    h2: "subtitle",
-  };
-
-  return tagClassMap[props.tag] || "";
-};
+const titleStyle = computed(() => ({
+  "title": tag === "h1",
+  "subtitle": tag === "h2",
+}));
 </script>
 
 <style scoped lang="scss">
