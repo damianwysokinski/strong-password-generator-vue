@@ -10,13 +10,11 @@ const { text, color } = defineProps<{
   color: string;
 }>();
 
-const buttonStyle = computed(() => {
-  return {
-    "btn--primary": color === "primary",
-    "btn--secondary": color === "secondary",
-    "btn--outlined": color === "outlined",
-  };
-});
+const buttonStyle = computed(() => ({
+  "btn--primary": color === "primary",
+  "btn--secondary": color === "secondary",
+  "btn--outlined": color === "outlined",
+}));
 </script>
 
 <style scoped lang="scss">
@@ -30,7 +28,7 @@ const buttonStyle = computed(() => {
   font-size: 13.33px;
 
   &--primary {
-    background: var(--base-color);
+    background: $base-color;
     color: #ffffff;
   }
   &--secondary {

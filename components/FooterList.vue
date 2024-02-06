@@ -21,7 +21,7 @@ defineProps(['list']);
         margin-bottom: 10px;
 
         &:first-child {
-            color: var(--brand-pink-color);
+            color: $brand-pink-color;
             text-transform: uppercase;
             font-weight: 600;
             margin-bottom: 20px;

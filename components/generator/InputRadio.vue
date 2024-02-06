@@ -67,7 +67,7 @@ defineProps<{
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      background: var(--brand-pink-color);
+      background: $brand-pink-color;
     }
   }
 }

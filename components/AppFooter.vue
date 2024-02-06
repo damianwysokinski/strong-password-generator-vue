@@ -114,7 +114,7 @@ const footerListData = [
 <style lang="scss" scoped>
 .footer {
   padding-top: 40px;
-  background: var(--base-bg-color);
+  background: $base-bg-color;
   &__wrapper {
     display: flex;
     flex-direction: column;

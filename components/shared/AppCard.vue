@@ -1,12 +1,12 @@
 <template>
   <div class="card" :class="cardStyle">
     <img
-        v-if="icon"
-        src="~/assets/icons/shield-tick.svg"
-        alt=""
-        width=""
-        height=""
-        class="card__icon" 
+      v-if="icon"
+      src="~/assets/icons/shield-tick.svg"
+      alt=""
+      width=""
+      height=""
+      class="card__icon"
     />
     <h3 class="card__title">{{ title }}</h3>
     <slot />
@@ -20,12 +20,10 @@ const { icon, title, color } = defineProps<{
   color?: string;
 }>();
 
-const cardStyle = computed(() => {
-  return {
-    "card--gray": color === "gray",
-    "card--red": color === "red",
-  };
-});
+const cardStyle = computed(() => ({
+  'card--gray': color === 'gray',
+  'card--red': color === 'red',
+}));
 </script>
 
 <style scoped lang="scss">
@@ -38,7 +36,7 @@ const cardStyle = computed(() => {
   &__icon {
     width: 80px;
     height: 80px;
-    background: var(--base-color);
+    background: $base-color;
     border-radius: 24px;
     display: flex;
     margin-bottom: 32px;
@@ -54,7 +52,7 @@ const cardStyle = computed(() => {
       padding: 2px 10px 10px 30px;
     }
     span {
-      color: var(--brand-pink-color);
+      color: $brand-pink-color;
     }
   }
   &--gray {

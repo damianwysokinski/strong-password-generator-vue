@@ -37,12 +37,12 @@ import AppTitle from "~/components/shared/AppTitle.vue";
 
 <style scoped lang="scss">
 .hero {
-  background: var(--base-bg-color);
+  background: $base-bg-color;
   padding-top: 180px;
   padding-bottom: 60px;
 
   &__subtitle {
-    color: var(--brand-pink-color);
+    color: $brand-pink-color;
     text-transform: uppercase;
     margin-bottom: 5px;
   }

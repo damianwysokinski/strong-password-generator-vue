@@ -46,7 +46,7 @@ defineProps<{
     width: 0;
 
     &:checked + .checkbox-input__checkmark {
-      background-color: var(--brand-pink-color);
+      background-color: $brand-pink-color;
       border: 0;
 
       &::after {
