@@ -21,9 +21,9 @@ export default defineNuxtConfig({
   vite: {
     css: {
       preprocessorOptions: {
-        sass: {
-          additionalData: '@use "~/assets/styles/_colors.scss" as *;',
-        },
+        scss: {
+          additionalData: '@use "~/assets/styles/_colors.scss" as *;'
+        }
       },
     },
   },
