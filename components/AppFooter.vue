@@ -11,7 +11,11 @@
             height="111"
           />
         </NuxtLink>
-        <FooterList v-for="(list, index) in footerListData" :key="index" :list="list" />
+        <FooterList
+          v-for="(list, index) in footerListData"
+          :key="index"
+          :list="list"
+        />
       </div>
       <p class="footer__copyright">
         Copyright © {{ currentYear }} password-generator. All rights reserved

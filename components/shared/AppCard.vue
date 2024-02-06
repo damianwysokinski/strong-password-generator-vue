@@ -21,8 +21,8 @@ const { icon, title, color } = defineProps<{
 }>();
 
 const cardStyle = computed(() => ({
-  'card--gray': color === 'gray',
-  'card--red': color === 'red',
+  "card--gray": color === "gray",
+  "card--red": color === "red",
 }));
 </script>
 

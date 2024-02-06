@@ -1,13 +1,13 @@
 <template>
-    <li class="footer__item">
-        <NuxtLink :to="link" class="footer__link">
-        {{ name }}
-        </NuxtLink>
-    </li>
+  <li class="footer__item">
+    <NuxtLink :to="link" class="footer__link">
+      {{ name }}
+    </NuxtLink>
+  </li>
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   link: string;
   name: string;
 }>();
@@ -15,9 +15,9 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .footer {
-    &__link {
-        color: #ffffff;
-        text-decoration: none;
-    }
+  &__link {
+    color: #ffffff;
+    text-decoration: none;
+  }
 }
 </style>

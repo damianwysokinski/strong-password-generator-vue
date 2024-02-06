@@ -11,8 +11,8 @@ const { tag, centered } = defineProps<{
 }>();
 
 const titleStyle = computed(() => ({
-  "title": tag === "h1",
-  "subtitle": tag === "h2",
+  title: tag === "h1",
+  subtitle: tag === "h2",
 }));
 </script>
 
