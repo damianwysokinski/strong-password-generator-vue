@@ -76,7 +76,7 @@ const faqPanelsData = [
     gap: 90px;
   }
   &__img {
-    margin-top: 20px;
+    margin: 20px auto 0;
   }
 }
 @media screen and (min-width: 1200px) {
