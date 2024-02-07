@@ -87,6 +87,7 @@ const benefitsData = [
 
   &__caption {
     text-align: center;
+    margin-bottom: 80px;
   }
 }
 
