@@ -66,6 +66,8 @@ import AppTitle from "~/components/shared/AppTitle.vue";
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 280px;
+    margin-bottom: 140px;
+    height: 1100px;
 
     &__wrapper {
       display: grid;
