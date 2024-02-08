@@ -1,10 +1,15 @@
 <template>
   <div class="checkbox-input">
-    <label class="checkbox-input__label">
+    <label
+      :class="{ 'checkbox-input__label--disabled': isDisabled }"
+      class="checkbox-input__label"
+    >
       <input
         class="checkbox-input__input"
         type="checkbox"
-        :checked="modelValue"
+        :checked="isChecked"
+        :disabled="isDisabled"
+        @change="handleChange"
       />
       {{ text }}
       <span class="checkbox-input__checkmark"></span>
@@ -13,10 +18,29 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   text: string;
   modelValue: boolean;
+  characterType?: string;
 }>();
+
+const isChecked = computed(() => props.modelValue);
+const isDisabled = computed(() => props.characterType === "easyToSay");
+
+const emit = defineEmits(["update:modelValue"]);
+
+const handleChange = () => {
+  emit("update:modelValue", !props.modelValue);
+};
+
+watch(
+  () => props.characterType,
+  () => {
+    if (isDisabled.value) {
+      emit("update:modelValue", false);
+    }
+  },
+);
 </script>
 
 <style scoped lang="scss">
@@ -36,6 +60,9 @@ defineProps<{
       .checkbox-input__checkmark {
         background-color: #ccc;
       }
+    }
+    &--disabled {
+      color: #aaa;
     }
   }
   &__input {
