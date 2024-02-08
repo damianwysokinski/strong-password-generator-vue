@@ -1,7 +1,13 @@
 <template>
   <div class="radio-input">
     <label class="radio-input__label">
-      <input class="radio-input__input" type="radio" />
+      <input
+        class="radio-input__input"
+        :value="value"
+        type="radio"
+        :checked="isChecked"
+        @change="handleChange"
+      />
       {{ text }}
       <span class="radio-input__checkmark"></span>
     </label>
@@ -9,9 +15,19 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   text: string;
+  value: string;
+  modelValue: string;
 }>();
+
+const isChecked = computed(() => props.value === props.modelValue);
+
+const emit = defineEmits(["update:modelValue"]);
+
+const handleChange = () => {
+  emit("update:modelValue", props.value);
+};
 </script>
 
 <style scoped lang="scss">
