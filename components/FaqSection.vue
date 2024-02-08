@@ -79,7 +79,7 @@ const faqPanelsData = [
     margin: 20px auto 0;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $breakpoint-desktop) {
   .faq {
     padding: 100px 0;
 

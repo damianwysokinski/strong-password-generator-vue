@@ -64,7 +64,7 @@ import AppCard from "~/components/shared/AppCard.vue";
     margin-bottom: 40px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $breakpoint-desktop) {
   .how-to {
     padding: 100px 0;
 

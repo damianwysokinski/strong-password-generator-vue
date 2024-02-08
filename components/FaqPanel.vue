@@ -56,7 +56,7 @@ const togglePanel = () => {
     display: none;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $breakpoint-desktop) {
   .faq-panel {
     &__title {
       font-size: 24px;

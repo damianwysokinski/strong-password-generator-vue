@@ -70,7 +70,7 @@ const cardStyle = computed(() => ({
     }
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $breakpoint-desktop) {
   .card {
     padding: 40px;
   }

@@ -30,7 +30,7 @@ const titleStyle = computed(() => ({
 .centered {
   text-align: center;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $breakpoint-desktop) {
   .title {
     font-size: 4rem;
   }

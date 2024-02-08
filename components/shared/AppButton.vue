@@ -48,7 +48,7 @@ const buttonStyle = computed(() => ({
     }
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $breakpoint-desktop) {
   .btn {
     padding: 12px 24px;
     font-size: 16px;

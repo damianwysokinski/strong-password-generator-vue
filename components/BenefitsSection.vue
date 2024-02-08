@@ -91,7 +91,7 @@ const benefitsData = [
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $breakpoint-desktop) {
   .benefits {
     padding: 100px 0;
   }

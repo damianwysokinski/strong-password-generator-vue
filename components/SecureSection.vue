@@ -50,7 +50,7 @@ import AppBanner from "~/components/shared/AppBanner.vue";
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $breakpoint-desktop) {
   .secure {
     padding: 100px 0;
 

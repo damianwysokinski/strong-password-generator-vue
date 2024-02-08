@@ -63,7 +63,7 @@ import AppTitle from "~/components/shared/AppTitle.vue";
     display: none;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $breakpoint-desktop) {
   .hero {
     padding-top: 280px;
     margin-bottom: 140px;

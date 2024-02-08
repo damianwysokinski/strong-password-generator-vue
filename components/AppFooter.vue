@@ -136,7 +136,7 @@ const footerListData = [
     border-top: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $breakpoint-desktop) {
   .footer {
     padding-top: 80px;
     &__wrapper {

@@ -42,7 +42,7 @@ defineProps<{
     justify-content: center;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $breakpoint-desktop) {
   .banner {
     &__title {
       font-size: 40px;
