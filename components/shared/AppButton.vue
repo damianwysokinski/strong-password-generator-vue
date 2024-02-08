@@ -27,6 +27,9 @@ const buttonStyle = computed(() => ({
   font-weight: 600;
   font-size: 13.33px;
 
+  &:hover {
+    opacity: 0.9;
+  }
   &--primary {
     background: $base-color;
     color: #ffffff;
@@ -38,6 +41,11 @@ const buttonStyle = computed(() => ({
     background: none;
     border: 1px solid #ffffff;
     color: #ffffff;
+    transition: background 0.3s ease-in;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
   }
 }
 @media screen and (min-width: 1200px) {
