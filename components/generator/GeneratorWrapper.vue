@@ -204,7 +204,7 @@ watch(
     margin-bottom: 40px;
   }
   &__range-input {
-    -webkit-appearance: none;
+    appearance: none;
     height: 7px;
     background: #dde3e5;
     border-radius: 5px;
@@ -213,7 +213,7 @@ watch(
     width: 100%;
 
     &::-webkit-slider-thumb {
-      -webkit-appearance: none;
+      appearance: none;
       height: 32px;
       width: 32px;
       border-radius: 50%;
@@ -223,7 +223,7 @@ watch(
       border: 4px solid #fbbbc4;
     }
     &::-webkit-slider-runnable-track {
-      -webkit-appearance: none;
+      appearance: none;
       box-shadow: none;
       border: none;
       background: transparent;
