@@ -8,16 +8,23 @@
         There are plenty of benefits when you use a password generator, let’s
         check it out. All benefits below.
       </p>
-      <div class="benefits__cards">
-        <app-card
-          v-for="({ icon, title, text }, index) in benefitsData"
-          :key="index"
-          :icon="icon"
-          :title="title"
-        >
-          <p>{{ text }}</p>
-        </app-card>
-      </div>
+    </div>
+    <div
+      ref="benefitsCardsContainer"
+      class="benefits__cards"
+      @mousedown="startDragging"
+      @mouseleave="endDragging"
+      @mouseup="endDragging"
+      @mousemove="dragging"
+    >
+      <app-card
+        v-for="({ icon, title, text }, index) in benefitsData"
+        :key="index"
+        :icon="icon"
+        :title="title"
+      >
+        <p>{{ text }}</p>
+      </app-card>
     </div>
   </section>
 </template>
@@ -78,6 +85,30 @@ const benefitsData = [
     text: "Password generating tools are probably the best investment for anyone, especially if you are a business owner or someone who spends a lot of time online. They are affordably priced and can save you a lot of money by not allowing hackers to steal and use your important information.",
   },
 ];
+
+const benefitsCardsContainer = ref<HTMLElement | null>(null);
+let isDown = false;
+let startX = 0;
+let scrollLeft = 0;
+
+const startDragging = (event: MouseEvent) => {
+  if (!benefitsCardsContainer.value) return;
+  isDown = true;
+  startX = event.pageX - (benefitsCardsContainer.value.offsetLeft ?? 0);
+  scrollLeft = benefitsCardsContainer.value.scrollLeft;
+};
+
+const dragging = (event: MouseEvent) => {
+  event.preventDefault();
+  if (!benefitsCardsContainer.value || !isDown) return;
+  const x = event.pageX - (benefitsCardsContainer.value.offsetLeft ?? 0);
+  const walk = (x - startX) * 1;
+  benefitsCardsContainer.value.scrollLeft = scrollLeft - walk;
+};
+
+const endDragging = () => {
+  isDown = false;
+};
 </script>
 
 <style scoped lang="scss">
@@ -89,11 +120,28 @@ const benefitsData = [
     text-align: center;
     margin-bottom: 80px;
   }
+  &__cards {
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(10, 481px);
+    gap: 32px;
+    cursor: grabbing;
+    padding: 0 20px;
+    margin-top: 40px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
 @media screen and (min-width: $breakpoint-desktop) {
   .benefits {
     padding: 100px 0;
+
+    &__cards {
+      grid-template-columns: repeat(5, 481px);
+    }
   }
 }
 </style>
