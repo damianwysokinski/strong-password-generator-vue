@@ -59,14 +59,14 @@ const cardStyle = computed(() => ({
     background: #eff4f6;
 
     & :deep(ul li) {
-      background: url("~/assets/icons/tick-circle.svg") no-repeat left top;
+      background: url("/icons/tick-circle.svg") no-repeat left top;
     }
   }
   &--red {
     background: #f6eded;
 
     & :deep(ul li) {
-      background: url("~/assets/icons/close-circle.svg") no-repeat left top;
+      background: url("/icons/close-circle.svg") no-repeat left top;
     }
   }
 }
