@@ -8,16 +8,11 @@
         readonly
       />
       <button class="generator__copy-button" @click="copyPassword">
-        <img
-          src="~/assets/icons/copy.svg"
-          alt="copy-icon"
-          width="48"
-          height="48"
-        />
+        <img src="/icons/copy.svg" alt="copy-icon" width="48" height="48" />
       </button>
       <button class="generator__refresh-button" @click="generatePassword">
         <img
-          src="~/assets/icons/refresh.svg"
+          src="/icons/refresh.svg"
           alt="refresh-icon"
           width="48"
           height="48"
