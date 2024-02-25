@@ -1,8 +1,8 @@
 <template>
   <div class="card" :class="cardStyle">
     <img
-      v-if="icon"
-      src="~/assets/icons/shield-tick.svg"
+      v-if="iconSrc"
+      :src="iconSrc"
       alt=""
       width=""
       height=""
@@ -14,8 +14,8 @@
 </template>
 
 <script setup lang="ts">
-const { icon, title, color } = defineProps<{
-  icon?: string;
+const { iconSrc, title, color } = defineProps<{
+  iconSrc?: string;
   title: string;
   color?: string;
 }>();

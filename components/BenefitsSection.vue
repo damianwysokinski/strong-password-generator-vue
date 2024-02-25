@@ -20,7 +20,7 @@
       <app-card
         v-for="({ icon, title, text }, index) in benefitsData"
         :key="index"
-        :icon="icon"
+        :icon-src="`/icons/${icon}.svg`"
         :title="title"
       >
         <p>{{ text }}</p>
